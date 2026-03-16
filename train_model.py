@@ -20,20 +20,41 @@ df = df[[
 ]]
 
 # Encode categorical variables
-le = LabelEncoder()
+job_encoder = LabelEncoder()
+df["job_title"] = job_encoder.fit_transform(df["job_title"])
 
-for col in df.columns:
-    if df[col].dtype == "object":
-        df[col] = le.fit_transform(df[col])
+location_encoder = LabelEncoder()
+df["company_location"] = location_encoder.fit_transform(df["company_location"])
+
+employment_encoder = LabelEncoder()
+df["employment_type"] = employment_encoder.fit_transform(df["employment_type"])
+
+size_encoder = LabelEncoder()
+df["company_size"] = size_encoder.fit_transform(df["company_size"])
+
+experience_encoder = LabelEncoder()
+df["experience_level"] = experience_encoder.fit_transform(df["experience_level"])
+
 
 # Split features and target
-X = df.drop("salary_in_usd", axis=1)
+X = df[[
+    "experience_level",
+    "employment_type",
+    "job_title",
+    "company_location",
+    "company_size"
+]]
+
 y = df["salary_in_usd"]
 
 # Train test split
 X_train, X_test, y_train, y_test = train_test_split(
     X, y, test_size=0.2, random_state=42
 )
+
+model = RandomForestRegressor()
+model.fit(X_train, y_train)
+
 
 # Train model
 param_grid = {
@@ -71,6 +92,12 @@ with open("model.pkl", "wb") as f:
     pickle.dump(model, f)
 
 print("Model saved successfully!")
+pickle.dump(experience_encoder, open("experience_encoder.pkl", "wb"))
+pickle.dump(job_encoder, open("job_encoder.pkl", "wb"))
+pickle.dump(location_encoder, open("location_encoder.pkl", "wb"))
+pickle.dump(employment_encoder, open("employment_encoder.pkl", "wb"))
+pickle.dump(size_encoder, open("size_encoder.pkl", "wb"))
+
 
 #This shows which factors affect salary the most
 import matplotlib.pyplot as plt
