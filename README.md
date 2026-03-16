@@ -1,30 +1,47 @@
-# 💰 Machine Learning Salary Prediction System
+# 💰 Paylytics
+### AI-Powered Salary Prediction App
 
-An end-to-end Machine Learning project that predicts salaries based on job attributes such as experience level, job title, company size, and location.
+Paylytics is a Machine Learning web application that predicts salaries based on job attributes such as experience level, employment type, job title, company location, and company size.
 
-This project demonstrates the complete ML pipeline including data preprocessing, model training, hyperparameter tuning, feature importance analysis, and deployment using Streamlit.
-
----
-
-## 🚀 Features
-
-- Salary prediction using **Random Forest Regression**
-- **Hyperparameter tuning** using GridSearchCV
-- **Feature importance visualization**
-- Interactive **Streamlit web application**
-- End-to-end ML workflow from data preprocessing to deployment
+The application is built using **Python, Scikit-learn, and Streamlit**, providing an interactive interface for users to estimate salaries based on real-world job data.
 
 ---
 
-## 🧠 Technologies Used
+## 🌐 Live Demo
 
+Try the app here:
+
+https://anveshasrivastava41-ship-it-paylytics.streamlit.app/
+
+---
+
+## ✨ Features
+
+- Predict salary using **Machine Learning**
+- Built with **Random Forest Regression**
+- Interactive **Streamlit UI**
+- Job-based predictions using real salary datasets
+- Skill selection for better context
+- Simple and user-friendly interface
+
+---
+
+## 🛠 Tech Stack
+
+**Frontend**
+- Streamlit
+
+**Backend**
 - Python
+
+**Machine Learning**
+- Scikit-learn
 - Pandas
 - NumPy
-- Scikit-learn
+
+**Visualization**
 - Matplotlib
 - Seaborn
-- Streamlit
 
 ---
 
@@ -32,7 +49,7 @@ This project demonstrates the complete ML pipeline including data preprocessing,
 
 ### Salary Distribution
 
-![Salary Distribution](images/salary_distribution.png)
+![Salary Distribution](salary_distribution.png)
 
 This graph shows how salaries are distributed across different data science roles.
 
@@ -40,7 +57,7 @@ This graph shows how salaries are distributed across different data science role
 
 ### Feature Importance
 
-![Feature Importance](images/feature_importance.png)
+![Feature Importance](feature_importance.png)
 
 This visualization shows which features have the most impact on salary prediction.
 
@@ -54,8 +71,7 @@ Key insights:
 
 ## 🖥 Streamlit Web Application
 
-![Streamlit App](images/streamlit_app1.png)
-![Streamlit App](images/streamlit_app2.png)
+![Streamlit App](streamlit_app.png)
 
 Users can input job details and the model predicts the estimated salary.
 
@@ -98,5 +114,26 @@ ML-Salary-Prediction
 │
 ├── feature_importance.png
 ├── salary_distribution.png
-├── streamlit_app1.png
-└── streamlit_app2.png
+├── streamlit_app
+
+---
+
+
+---
+
+## 🚀 Future Improvements
+
+- Add salary analytics dashboard
+- Add more job role predictions
+- Integrate real-time job market data
+- Improve model accuracy
+
+---
+
+## 👩‍💻 Author
+
+**Anvesha Srivastava**
+
+GitHub:  
+https://github.com/anveshasrivastava41-ship-it
+
