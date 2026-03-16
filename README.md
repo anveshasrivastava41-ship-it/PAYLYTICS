@@ -11,7 +11,7 @@ The application is built using **Python, Scikit-learn, and Streamlit**, providin
 
 Try the app here:
 
-https://anveshasrivastava41-ship-it-paylytics.streamlit.app/
+https://paylytics.streamlit.app/
 
 ---
 
